@@ -3,10 +3,10 @@ mod file_entry;
 mod line_entry;
 mod warning;
 
+use colored::*;
 pub use file_entry::FileEntry;
 pub use line_entry::LineEntry;
 pub use warning::Warning;
-
 pub const LF: &str = "\n";
 
 pub fn remove_invalid_leading_chars(string: &str) -> String {

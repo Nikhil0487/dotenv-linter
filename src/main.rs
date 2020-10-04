@@ -1,4 +1,5 @@
 use clap::Arg;
+use colored::*;
 use std::error::Error;
 use std::ffi::OsStr;
 use std::{env, process};
@@ -49,7 +50,15 @@ fn print_total(total: usize) {
         problems += "s";
     }
 
-    println!("\n{}", format!("Found {} {}", total, problems));
+    println!(
+        "\n{}",
+        format!(
+            "{} {} {}",
+            String::from("Found").to_string().red().bold(),
+            total.to_string().red().bold(),
+            problems.to_string().red().bold()
+        )
+    );
 }
 
 fn get_args(current_dir: &OsStr) -> clap::ArgMatches {

@@ -3,7 +3,6 @@ use std::fs;
 use std::path::PathBuf;
 
 use crate::common::*;
-
 #[derive(Clone, Debug, Eq, Ord, PartialEq, PartialOrd)]
 pub struct FileEntry {
     pub path: PathBuf,
